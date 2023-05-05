@@ -2,6 +2,7 @@ package com.example.selfpromoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Spinner
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun onPreviewClicked() {
         val testString = contactNameEditText?.text.toString() + ", " + contactNumberEditText?.text.toString()
-
         Toast.makeText(this, testString, Toast.LENGTH_LONG).show()
+        Log.d("Contact Name", "The name is: ${testString}")
     }
 }
