@@ -1,5 +1,6 @@
 package com.example.selfpromoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -60,11 +61,13 @@ class MainActivity : AppCompatActivity() {
         val immediateStart = binding.checkBoxImmediateStart.isChecked
         val startDate = binding.editTextStartDate.text.toString()
 
-        Toast.makeText(
-            this,
-            "$contactName, $contactNumber, $myDisplayName, $includeJunior, $jobTitle, $immediateStart, $startDate",
-            Toast.LENGTH_LONG
-        ).show()
+//        Toast.makeText(
+//            this,
+//            "$contactName, $contactNumber, $myDisplayName, $includeJunior, $jobTitle, $immediateStart, $startDate",
+//            Toast.LENGTH_LONG
+//        ).show()
 
+        val previewActivityIntent = Intent(this, PreviewActivity::class.java)
+        startActivity(previewActivityIntent)
     }
 }
