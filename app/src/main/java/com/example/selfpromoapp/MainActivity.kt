@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 //    private var immediateStartCheckBox: CheckBox? = null
 //    private var jobTitleSpinner: Spinner? = null
 
+
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(
             this,
-            "$contactName, $contactNumber, $myDisplayName, $includeJunior, $immediateStart, $startDate",
+            "$contactName, $contactNumber, $myDisplayName, $includeJunior, $jobTitle, $immediateStart, $startDate",
             Toast.LENGTH_LONG
         ).show()
 
