@@ -23,6 +23,6 @@ class PreviewActivity : AppCompatActivity() {
         val immediateStart = intent.getBooleanExtra("Immediate Start", false)
         val startDate = intent.getStringExtra("Start Date")
 
-        binding.textViewMessage.text = "Name: $contactName\nContact Number: $contactNumber\nUsername: $myDisplayName\nStart Date: $startDate \nJunior: $includeJunior"
+        binding.textViewMessage.text = "Name: $contactName\nContact Number: $contactNumber\nUsername: $myDisplayName\nStart Date: $startDate \nJunior: $includeJunior\nJob Title: $jobTitle"
     }
 }

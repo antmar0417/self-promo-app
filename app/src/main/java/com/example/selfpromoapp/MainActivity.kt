@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Spinner
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         binding.buttonPreview.setOnClickListener { onPreviewClicked() }
+        val spinnerValues = arrayOf("Android Developer", "Android Engineer", "Frontend Developer")
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerValues)
+        binding.spinnerJobTitle.adapter = spinnerAdapter
     }
 
     private fun onPreviewClicked() {
@@ -57,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         val contactNumber = binding.editTextContactNumber.text.toString()
         val myDisplayName = binding.editTextMyDisplayName.text.toString()
         val includeJunior = binding.checkBoxJunior.isChecked
-            val jobTitle = binding.spinnerJobTitle.selectedItem?.toString()
+        val jobTitle = binding.spinnerJobTitle.selectedItem?.toString()
         val immediateStart = binding.checkBoxImmediateStart.isChecked
         val startDate = binding.editTextStartDate.text.toString()
 
