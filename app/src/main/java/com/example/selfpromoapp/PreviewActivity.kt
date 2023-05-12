@@ -24,22 +24,25 @@ class PreviewActivity : AppCompatActivity() {
 //        val immediateStart = intent.getBooleanExtra("Immediate Start", false)
 //        val startDate = intent.getStringExtra("Start Date")
 
+        displayMessage()
+    }
 
+    private fun displayMessage() {
         val message = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getSerializableExtra("Message", Message::class.java)
         } else {
             intent.getSerializableExtra("Message") as Message
         }
 
-//        binding.textViewMessage.text = "Name: $contactName\nContact Number: $contactNumber\nUsername: $myDisplayName\nStart Date: $startDate \nJunior: $includeJunior\nJob Title: $jobTitle"
+        //        binding.textViewMessage.text = "Name: $contactName\nContact Number: $contactNumber\nUsername: $myDisplayName\nStart Date: $startDate \nJunior: $includeJunior\nJob Title: $jobTitle"
 
         binding.textViewMessage.text = """
-            Hi ${message?.contactName},
-            
-            My name is ${message?.myDisplayName} and I am ${message?.getFullJobDescription()}.
-            I am able to start ${message?.getGetAvailability()}
-            
-            Best Regards ${message?.myDisplayName}
-        """.trimIndent()
+                Hi ${message?.contactName},
+                
+                My name is ${message?.myDisplayName} and I am ${message?.getFullJobDescription()}.
+                I am able to start ${message?.getGetAvailability()}
+                
+                Best Regards ${message?.myDisplayName}
+            """.trimIndent()
     }
 }
