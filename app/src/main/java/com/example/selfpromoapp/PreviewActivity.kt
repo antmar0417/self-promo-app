@@ -63,6 +63,7 @@ class PreviewActivity : AppCompatActivity() {
                 putExtra("sms_body", messagePreviewText)
             }
             startActivity(intent)
+//            test
         }
     }
 }
