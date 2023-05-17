@@ -41,12 +41,16 @@ class PreviewActivity : AppCompatActivity() {
         }
 
         messagePreviewText = """
-                Hi ${message.contactName},
+                Hello ${message.contactName},
                 
                 My name is ${message.myDisplayName} and I am ${message.getFullJobDescription()}.
-                I am able to start ${message.getGetAvailability()}
+                I have a portfolio of apps to demonstrate my technical skills that I can show on request.
+                I am able to start a new position ${message.getGetAvailability()}.
                 
-                Best Regards ${message.myDisplayName}
+                Please get in touch if you have any suitable roles for me.
+                
+                Best Regards 
+                ${message.myDisplayName}
             """.trimIndent()
 
         //        binding.textViewMessage.text = "Name: $contactName\nContact Number: $contactNumber\nUsername: $myDisplayName\nStart Date: $startDate \nJunior: $includeJunior\nJob Title: $jobTitle"
